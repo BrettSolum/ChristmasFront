@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
-import api from 'api';
-import {Sidebar, Menu, Segment, Icon} from "semantic-ui-react";
+import {Sidebar, Menu, Segment, Icon, Header} from "semantic-ui-react";
+import api from './api';
 
 function App() {
 
-    console.log(api.getFamilyList())
-
-
+    React.useEffect(()=> {
+        const
+            familyList= api.getFamilyList();
+        console.log(familyList);
+    },[])
 
   return (
     <div className="App">
@@ -24,9 +26,9 @@ function App() {
           </Sidebar>
 
           <Sidebar.Pusher style={{height: '100%'}}>
-              <div style={{height: '100%', paddingBottom: 60}}>
-                  family stuff
-              </div>
+              <Segment basic>
+                  <Header as='h3'>Family Stuff</Header>
+              </Segment>
           </Sidebar.Pusher>
       </Sidebar.Pushable>
     </div>

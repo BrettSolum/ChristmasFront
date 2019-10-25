@@ -1,20 +1,23 @@
-import {AxiosInstance as axios} from "axios";
+import axios from "axios";
 
-const url = 'localhost:5001/api';
+const url = 'https://localhost:5001/api';
 
 class api {
     static getFamilyList(){
-        return axios.get(url + '/families')
+        return axios.get(url + '/Families')
             .then(function (response) {
                 //handle success
                 console.log(response);
+                return response;
             })
             .catch(function (error) {
                 //handle error
                 console.log(error);
+                return error;
             })
             .finally(function () {
                 //always executed
+                return "attempted call to " + url + "/Families";
             })
     }
 }
