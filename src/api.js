@@ -13,11 +13,10 @@ class api {
             .catch(function (error) {
                 //handle error
                 console.log(error);
-                return error;
             })
             .finally(function () {
                 //always executed
-                return "attempted call to " + url + "/Families";
+                console.log("attempted call to " + url + "/Families");
             })
     }
 }
