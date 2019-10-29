@@ -7,8 +7,7 @@ class api {
         return axios.get(url + '/Families')
             .then(function (response) {
                 //handle success
-                console.log(response);
-                return response;
+                return response.data;
             })
             .catch(function (error) {
                 //handle error
