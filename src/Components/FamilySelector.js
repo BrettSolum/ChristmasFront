@@ -25,7 +25,6 @@ function FamilySelector({selectedFamilyId, onFamilySelect}) {
             activeIndex={loadedFamilies.findIndex(x => x.id === selectedFamilyId)}
             onItemClick={onFamilySelect}
         />
-        console.log(loadedFamilies);
     };
 
     return (
