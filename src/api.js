@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = 'https://localhost:5001/api';
+const url = `https://${window.location.host}:5001/api`;
 
 class api {
     static getFamilyList(){
