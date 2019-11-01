@@ -1,9 +1,10 @@
 import axios from "axios";
 
-const url = `http://${window.location.host}:5001/api`;
+const url = `https://${window.location.hostname}:5001/api`;
 
 class api {
     static getFamilyList(){
+        debugger;
         return axios.get(url + '/Families')
             .then(function (response) {
                 //handle success
